@@ -46,13 +46,13 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
-| Natalia  | Global Information Security Manager | Email: [insertEmail]|
+| Natalia  | Global Information Security Manager | Email: [insertEmail] |
 
 **Company:** Hexterika Cyber Lab
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
-| Sangsongthong C. | Penetration Tester | Email: [sangsongthong.c@hexterika-cyber-lab.work.gd](sangsongthong.c@hexterika-cyber-lab.work.gd) |
+| Sangsongthong C. | Penetration Tester | Email: [insertEmail] |
 
 ---
 
