@@ -135,6 +135,64 @@ Depend on the comfort level of the company that the login page is being expose t
 
 Even though the service ports are non-default, they can easily be found using Nmap.
 
+---
+
+**Finding 2:** Weak Password
+
+**Description:**
+
+The password is easily to crack. I used Burp Suite's smart decoder to decode Boris's password.
+
+**Risk:** How this vulnerability could affect the system.
+
++ **Likelyhood:**
+  
++ **Impact:**
+
+**Tool Used:** Burp, Firefox, hashcat
+
+**Evidence:**
+
+![BorisNeedsToUpdatePasswd](Images/THM_GoldenEye_3_BorisNeedsToUpdatePasswd.png)
+
+![crackBorisPasswdWithBurpDecoder](Images/THM_GoldenEye_3.1_crackBorisPasswdWithBurpDecoder.png)
+
+![login](Images/THM_GoldenEye_4_login.png)
+
+![borisPOP3Pass](Images/THM_GoldenEye_7_borisPOP3Pass.png)
+
+![loginAsBorisPOP3](Images/THM_GoldenEye_8_loginAsBorisPOP3.png)
+
+![borisEmail2and3](Images/THM_GoldenEye_9_borisEmail2and3.png)
+
+![natalyaPOP3Pass](Images/THM_GoldenEye_10_natalyaPOP3Pass.png)
+
+![natalyaPOP3LoginEmail1](Images/THM_GoldenEye_11_natalyaPOP3LoginEmail1.png)
+
+![natalyaPOP3LoginEmail2AndXeniaPass](Images/THM_GoldenEye_12_natalyaPOP3LoginEmail2AndXeniaPass.png)
+
+**Remediation:** Steps to fix or mitigate the vulnerability.
+
+---
+
+**Finding 3:** Security by Obsecurity
+
+**Description:** A detailed description of the vulnerability.
+
+**Risk:** How this vulnerability could affect the system.
+
++ **Likelyhood:**
+  
++ **Impact:**
+
+**Tool Used:** [toolName]
+
+**Evidence:**
+
+![loginSuccessFoundPOP3](Images/THM_GoldenEye_5_loginSuccessFoundPOP3.png)
+
+**Remediation:** Steps to fix or mitigate the vulnerability.
+
 ### Exploitation
 
 ### Maintain Access
