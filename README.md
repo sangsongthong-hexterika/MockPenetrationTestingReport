@@ -58,16 +58,6 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 
 ## Finding Severity Ratings
 
-The following table defines levels of severity and corresponding CVSS score range that are used throughout the document to assess vulnerability and risk impact.
-
-| Severity | CVSS V3 Score Range | Definition |
-| :------: | :-----------------: | :--------: |
-| Critical | 9.0 - 10.0 | Exploitation is straightforward and usually results in system-level compromise. It is advised to form a plan of action and patch immediately. |
-| High     | 7.0 - 8.9  | Exploitation is more difficult but could cause elevated privileges and potentially a loss of data or downtime. It is advised to form a plan of action and patch as soon as possible. |
-| Moderate | 4.0 - 6.9  | Vulnerabilities exist but are not exploitable or require extra steps such as social engineering. It is advised to form a plan of action and patch after high-priority issues have been resolved. |
-| Low      | 0.1 - 3.9  | Vulnerabilities are non-exploitable but would reduce an organization’s attack surface. It is advised to form a plan of action and patch during the next maintenance window. |
-| Informational | N/A   | No vulnerability exists. Additional information is provided regarding items noticed during testing, strong controls, and additional documentation. |
-
 **Risk Factors** Risk is measured by two factors: Likelihood and Impact:
 
 + **Likelihood**
@@ -114,7 +104,7 @@ All other attacks not specified above were permitted by [CompanyName].
 
 ## Methodology
 
-### Information Gathering
+### Technical Findings
 
 **Finding 1:** [Vulnerability Name]
 
@@ -134,12 +124,6 @@ All other attacks not specified above were permitted by [CompanyName].
 
 **Finding 2:** [Another Vulnerability Name]
 (Repeat the same format for each finding)
-
-### Exploitation
-
-### Maintain Access
-
-### House Cleaning
 
 ---
 
