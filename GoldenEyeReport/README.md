@@ -319,7 +319,13 @@ Upon downloading and analyzing the file with ExifTool, an encoded message was re
 
 **Tool Used:** Firefox, `hydra`, `nc`
 
-**Evidence:** Insert screenshots
+**Evidence:**
+
+![drDoakSecretFile4James](Images/THM_GoldenEye_22_drDoakSecretFile4James.png)
+
+![secrettextTo007](Images/THM_GoldenEye_24_secrettextTo007.png)
+
+![dir007keyFor007Pic](Images/THM_GoldenEye_25_dir007keyFor007Pic.png)
 
 **Remediation:**
 
@@ -333,111 +339,161 @@ Upon downloading and analyzing the file with ExifTool, an encoded message was re
 
 ---
 
-**Finding 6:** POP3 Credential Disclosure & User Information Discovery
+**Finding 6:** Extraction of Admin Credentials via Steganographic Encoding in Image File
 
 **Description:**
 
-Once an attacker successfully compromises a user’s account, they gain access to all information available to that user. In this case, after logging in as Xenia, her registered email address was accessible, along with any data or communication she had permission to view.
+During the assessment, an image file named for-007.jpg was identified as containing encoded information. Using ExifTool, metadata analysis revealed an encoded message embedded within the file. This message was decoded using Burp Suite’s decoder, revealing the Admin user’s password.
 
-This security weakness increases the potential damage from credential theft, session hijacking, or phishing attacks, as the attacker can masquerade as the legitimate user and access sensitive internal information.
+With these credentials, an attacker could log into the Moodle platform as an admin user, gaining access to sensitive user data, including the ability to modify settings, view all users, and further escalate privileges within the system.
 
-**Risk:** How this vulnerability could affect the system.
+**Risk:**
 
 + **Likelyhood:** High
-  + If user credentials are compromised (e.g., through brute force, phishing, or plaintext exposure), an attacker can log in and fully assume the user's identity.
+  + Since an attacker with access to the file could extract and decode the credentials without requiring prior privilege escalation.
   
-+ **Impact:**  High
-  + Unauthorized access could lead to further reconnaissance, data exfiltration, and privilege escalation if the compromised account has access to additional systems.
++ **Impact:** Critical
+  + Admin credentials allow full control over Moodle, including user management, configuration changes, and potential code execution.
 
-**Tool Used:** Firefox
+**Tool Used:** Burp Suite Decoder, `exiftool`
 
-**Evidence:** Insert screenshots
+**Evidence:**
+
+![useExifOnFor007Pic](Images/THM_GoldenEye_26_useExifOnFor007Pic.png)
+
+![useBurpToDecodeTheEncodedMessageFromDoak_Base64](Images/THM_GoldenEye_27_useBurpToDecodeTheEncodedMessageFromDoak_Base64.png)
 
 **Remediation:**
 
-Implement Multi-Factor Authentication (MFA) to reduce the risk of account compromise.
++ Enforce Multi-Factor Authentication (MFA) for all privileged accounts to prevent unauthorized access even if credentials are leaked.
 
-Restrict session duration and enforce automatic logout after a period of inactivity to reduce session hijacking risks.
++ Implement login alerts to notify administrators of suspicious login attempts, especially from unknown locations or devices.
 
-Monitor and log unusual login activities (e.g., logins from unexpected locations or devices) and alert users to suspicious activity.
-
-Educate users on phishing risks to prevent credential theft through social engineering.
++ Enable logging and monitoring for admin account activity to detect unusual access patterns, such as logins from unexpected locations or devices.
 
 ---
 
-**Finding 8:** POP3 Credential Disclosure & User Information Discovery
+**Finding 7:** Remote Code Execution via Moodle’s Aspell Plugin
 
 **Description:**
 
-**Risk:** How this vulnerability could affect the system.
+Upon logging in as the admin user, it was identified that Moodle’s Aspell spell checker plugin allowed arbitrary code execution. By modifying the Aspell path setting, an attacker could inject a Python reverse shell payload.
 
-+ **Likelyhood:**
+After making the modification, the payload was triggered when attempting to spell-check content within Moodle’s blog post editor. This resulted in the establishment of a reverse shell connection, allowing full system access as the web application user.
+
+**Risk:**
+
++ **Likelyhood:** High
+  + The vulnerability exists within Moodle’s configuration, and an attacker with admin credentials can easily exploit it.
   
-+ **Impact:**
++ **Impact:** Critical
+  + Successful exploitation results in remote command execution (RCE), allowing full control of the underlying system.
 
-**Tool Used:** [toolName]
+**Tool Used:** `nc`, Moodle Aspell Plugin (Abused for Command Execution), Python Reverse Shell Exploit
 
-**Evidence:** Insert screenshots
+**Evidence:**
 
-**Remediation:** Steps to fix or mitigate the vulnerability.
+![loginMoodleAsAdmin](Images/THM_GoldenEye_27_loginMoodleAsAdmin.png)
+
+![allUsers](Images/THM_GoldenEye_28_allUsers.png)
+
+![BorisIsAdmin](Images/THM_GoldenEye_29_BorisIsAdmin.png)
+
+![AddRevShellCodeToAspellAndChangeSpellEngineToPSpellShell](Images/THM_GoldenEye_30_AddRevShellCodeToAspellAndChangeSpellEngineToPSpellShell.png)
+
+![spellCheck](Images/THM_GoldenEye_31_spellCheck.png)
+
+![igotashell](Images/THM_GoldenEye_32_igotashell.png)
+
+**Remediation:**
+
++ Enforce Multi-Factor Authentication (MFA) for all privileged accounts to prevent unauthorized access even if credentials are leaked.
+
++ Implement login alerts to notify administrators of suspicious login attempts, especially from unknown locations or devices.
+
++ Enable logging and monitoring for admin account activity to detect unusual access patterns, such as logins from unexpected locations or devices.
+
++ Disable unnecessary plugins: If Aspell isn’t needed, remove or disable it to eliminate the attack vector.
 
 ---
 
-**Finding 9:** POP3 Credential Disclosure & User Information Discovery
+**Finding 8:** Allowing Download from HTTP Without Antivirus Scanning for Exploit Files
 
 **Description:**
 
-**Risk:** How this vulnerability could affect the system.
+The system allows files to be downloaded via HTTP without any secure transmission (HTTP instead of HTTPS) and without antivirus scanning or malware detection for files. An attacker could use this to deliver exploit files or malicious payloads to the system, potentially leading to further exploitation.
 
-+ **Likelyhood:**
+**Risk:**
+
++ **Likelyhood:** High
+  + The lack of secure file transfer protocols (such as HTTPS) makes it easier for attackers to exploit this weakness and deliver malicious files. Furthermore, the absence of antivirus scanning increases the likelihood of malicious payloads being executed.
   
-+ **Impact:**
++ **Impact:** Critical
+  + Privilege Escalation: Malicious files could be used to escalate privileges, gaining unauthorized access to the system.
 
-**Tool Used:** [toolName]
+  + System Compromise: Exploit files could compromise the system, leading to full control of the target machine, potentially resulting in data theft, backdoor installation, or further system exploitation.
 
-**Evidence:** Insert screenshots
+**Tool Used:** python web server, exploit file
 
-**Remediation:** Steps to fix or mitigate the vulnerability.
+**Evidence:**
 
----
+![setupPythonServer](Images/THM_GoldenEye_33_setupPythonServer.png)
 
-**Finding 10:** POP3 Credential Disclosure & User Information Discovery
+![wgetLinuxPrivCheckerPy](Images/THM_GoldenEye_34_wgetLinuxPrivCheckerPy.png)
 
-**Description:**
+![downloadFilesFromMyKali](Images/THM_GoldenEye_35_downloadFilesFromMyKali.png)
 
-**Risk:** How this vulnerability could affect the system.
+![downloadMaliciousFile](Images/THM_GoldenEye_37_sendingTheExploitAfterMakingChangeToIt.png)
 
-+ **Likelyhood:**
-  
-+ **Impact:**
+![successfulExploitRuningGainRoot](Images/THM_GoldenEye_38_successfulExploitRuningGainRoot.png)
 
-**Tool Used:** [toolName]
+![getRootFlag](Images/THM_GoldenEye_40_getRootFlag.png)
 
-**Evidence:** Insert screenshots
+**Remediation:**
 
-**Remediation:** Steps to fix or mitigate the vulnerability.
++ Restrict file downloads to trusted sources and ensure that any file transfer process is secured to prevent unauthorized files from being delivered.
 
----
++ Use secure file transfer protocols like HTTPS to protect file integrity during transmission, even though MITM wasn’t performed here. Ensuring encrypted file transfers would help making unauthorized users from sending potentially harmful files more difficult.
 
-**Finding 11:** POP3 Credential Disclosure & User Information Discovery
++ Scan files for malicious content before allowing their download or execution.
 
-**Description:**
-
-**Risk:** How this vulnerability could affect the system.
-
-+ **Likelyhood:**
-  
-+ **Impact:**
-
-**Tool Used:** [toolName]
-
-**Evidence:** Insert screenshots
-
-**Remediation:** Steps to fix or mitigate the vulnerability.
++ Use a combination of antivirus software and a host-based IPS to provide layered protection. Ensure both systems are updated regularly with the latest signatures and detection rules.
 
 ---
 
 ## Additional Information
+
+Here are the credentials leaked that I got from POP3 brute-forcing.
+
+| User | Username | Password |
+| :--: | :------: | :------: |
+| Boris | boris | secret1! |
+| Natalie | natalya | bird |
+| Doak | doak | goat |
+
+Evidences:
+
+![borisPOP3Pass](Images/THM_GoldenEye_7_borisPOP3Pass.png)
+
+![natalyaPOP3Pass](Images/THM_GoldenEye_10_natalyaPOP3Pass.png)
+
+![doakPassPOP3](Images/THM_GoldenEye_19_doakPassPOP3.png)
+
+Here is Boris's GoldenEye login credential.
+
+| User | Username | Password |
+| :--: | :------: | :------: |
+| Boris | boris | InvincibleHack3r |
+
+Evidence:
+
+![crackBorisPasswdWithBurpDecoder](Images/THM_GoldenEye_3.1_crackBorisPasswdWithBurpDecoder.png)
+
+Here is the credentials leaked in plaintext.
+
+![XeniaMoodleCredentialLeakInPlaintext](Images/THM_GoldenEye_12_natalyaPOP3LoginEmail2AndXeniaPass.png)
+
+![dr_doakMoodleCredentialLeakInPlaintext](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
 
 ---
 
