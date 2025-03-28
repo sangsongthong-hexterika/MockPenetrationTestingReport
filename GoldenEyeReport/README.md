@@ -63,11 +63,15 @@ Impact measures the potential vulnerability’s effect on operations, including 
 
 ## Executive Summary
 
-Summary of Findings: Brief overview of critical findings.
+Here are the overview of critical findings.
 
-Risk Level: High/Medium/Low (based on your findings).
++ A discovery of an insider threat: There were some evidence of an employee intentionally leaking their credential to help an outsider to come side your company's system.
 
-Key Recommendations: Highlight main actions for the client.
++ Admin's password breached: This lead to administrator account compromisation.
+
++ Leak credentials.
+
++ RCE vulnerability from the plugin, Aspenll.
 
 ---
 
@@ -285,19 +289,13 @@ During the assessment, it was discovered that Dr. Doak, an internal user, was ac
 
 **Evidence:**
 
-![loginMoodleWithXeniaCred](Images/THM_GoldenEye_15_loginMoodleWithXeniaCred.png)
-
-![xeniaMoodleProfileWithEmailExposure](Images/THM_GoldenEye_16_xeniaMoodleProfileWithEmailExposure.png)
+![loginDoakPOP3AndFoundNewCred](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
 
 **Remediation:**
 
-+ Implement strict access control policies to limit user privileges based on role and necessity.
-
-+ Enforce security training and awareness programs to educate employees about the dangers of credential sharing.
++ Revoke all access to the company from Dr. Doak and arrest him.
 
 + Monitor and audit internal communications for suspicious activity, such as credential sharing in emails.
-
-+ Implement Data Loss Prevention (DLP) solutions to detect and prevent the transmission of sensitive credentials over emails.
 
 ---
 
@@ -305,9 +303,9 @@ During the assessment, it was discovered that Dr. Doak, an internal user, was ac
 
 **Description:**
 
-As part of the investigation, it was discovered that Dr. Doak was involved in an insider data exfiltration operation. The exfiltrated data was embedded within an image file, for-007.jpg, which was found during an analysis of Dr. Doak's Moodle account. The image was initially referenced within the system and ultimately led to the extraction of sensitive credentials.
+As part of the investigation, it was discovered that Dr. Doak was involved in an insider data exfiltration operation. There was an evidence of him, under the account name `doak`, sending an email to an outsider, James, instructing him to login to his account to retrieve a secret file he hid in his account like a normal file.
 
-Upon downloading and analyzing the file with ExifTool, an encoded message was revealed that contained admin-level credentials. These credentials provided unauthorized access to the system, demonstrating a significant security vulnerability in the exfiltration of data through seemingly innocent files.
+That file was found during an analysis of Dr. Doak's Moodle account. Insider the secret file, there was an instruction for James, the outsider, to navigate to a specific URL to retrieve an image file `for-007.jpg` in which he claimed it contained admin credential.
 
 **Risk:**
 
@@ -317,9 +315,11 @@ Upon downloading and analyzing the file with ExifTool, an encoded message was re
 + **Impact:** Critical
   + The exfiltrated data contained admin credentials, enabling an attacker to gain full control of the system, compromising sensitive data and operations.
 
-**Tool Used:** Firefox, `hydra`, `nc`
+**Tool Used:** Firefox, `nc`
 
 **Evidence:**
+
+![loginDoakPOP3AndFoundNewCred](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
 
 ![drDoakSecretFile4James](Images/THM_GoldenEye_22_drDoakSecretFile4James.png)
 
@@ -329,13 +329,7 @@ Upon downloading and analyzing the file with ExifTool, an encoded message was re
 
 **Remediation:**
 
-+ Implement strong file integrity monitoring and content inspection for all file uploads and downloads, particularly images and documents.
-
-+ Use encryption and access control policies for sensitive data, ensuring only authorized individuals can access it.
-
-+ Regularly audit system logs to detect unauthorized or suspicious file access and potential data exfiltration activities.
-
-+ Educate users about the potential risks associated with embedding sensitive information in non-obvious places, such as image files.
++ Revoke all access to the company from Dr. Doak and arrest him.
 
 ---
 
@@ -343,7 +337,7 @@ Upon downloading and analyzing the file with ExifTool, an encoded message was re
 
 **Description:**
 
-During the assessment, an image file named for-007.jpg was identified as containing encoded information. Using ExifTool, metadata analysis revealed an encoded message embedded within the file. This message was decoded using Burp Suite’s decoder, revealing the Admin user’s password.
+During the assessment, an image file named for-007.jpg was identified as containing encoded information. Using ExifTool, metadata analysis revealed an encoded message embedded within the file. This message was decoded using Burp Suite’s decoder, revealing the Admin's password.
 
 With these credentials, an attacker could log into the Moodle platform as an admin user, gaining access to sensitive user data, including the ability to modify settings, view all users, and further escalate privileges within the system.
 
@@ -365,26 +359,28 @@ With these credentials, an attacker could log into the Moodle platform as an adm
 
 **Remediation:**
 
-+ Enforce Multi-Factor Authentication (MFA) for all privileged accounts to prevent unauthorized access even if credentials are leaked.
++ Revoke all access to the company from Dr. Doak and arrest him.
 
-+ Implement login alerts to notify administrators of suspicious login attempts, especially from unknown locations or devices.
++ Change admin account's password to prevent further breach.
 
-+ Enable logging and monitoring for admin account activity to detect unusual access patterns, such as logins from unexpected locations or devices.
++ Check all the system to see what damages has been done to the system such as sensitive company's data and password of something highly valuable being stolen or some changes inside the system.
+
++ Inform high-profile clients and key stakeholders about the breach, including any potential data exposure and mitigation steps being taken.
 
 ---
 
-**Finding 7:** Remote Code Execution via Moodle’s Aspell Plugin
+**Finding 7:** Remote Code Execution via Moodle's Aspell Plugin
 
 **Description:**
 
-Upon logging in as the admin user, it was identified that Moodle’s Aspell spell checker plugin allowed arbitrary code execution. By modifying the Aspell path setting, an attacker could inject a Python reverse shell payload.
+Upon logging in as the admin user, it was identified that Moodle's Aspell spell checker plugin allowed arbitrary code execution. By modifying the Aspell path setting, an attacker could inject a Python reverse shell payload.
 
-After making the modification, the payload was triggered when attempting to spell-check content within Moodle’s blog post editor. This resulted in the establishment of a reverse shell connection, allowing full system access as the web application user.
+After making the modification, the payload was triggered when attempting to spell-check content within Moodle's blog post editor. This resulted in the establishment of a reverse shell connection, allowing full system access as the web application user.
 
 **Risk:**
 
 + **Likelyhood:** High
-  + The vulnerability exists within Moodle’s configuration, and an attacker with admin credentials can easily exploit it.
+  + The vulnerability exists within Moodle's configuration, and an attacker with admin credentials can easily exploit it.
   
 + **Impact:** Critical
   + Successful exploitation results in remote command execution (RCE), allowing full control of the underlying system.
