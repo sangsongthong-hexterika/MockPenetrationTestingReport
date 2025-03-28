@@ -74,10 +74,6 @@ Impact measures the potential vulnerability’s effect on operations, including 
 
 Summary of Findings: Brief overview of critical findings.
 
-Risk Level: High/Medium/Low (based on your findings).
-
-Key Recommendations: Highlight main actions for the client.
-
 ---
 
 ## Test Scope
