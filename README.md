@@ -127,6 +127,14 @@ All other attacks not specified above were permitted by [CompanyName].
 
 ---
 
-**Sangsongthong**
-| Hexterika Cyber Lab
-| CEO, Founder, and Sole Worker
+**Author & Publisher:** Sangsongthong Chantaranothai
+
+**Date Published:** -
+*(Based on the commit where the full walkthrough was completed. Later commits are minor edits or additions.)*
+
+**Purpose:** Created as part of ongoing professional development to earn CEU/CPE credits for CompTIA and ISC2 certifications. Also intended to showcase cybersecurity skills, support Hexterika Cyberlab's portfolio, and demonstrate project quality to future clients and employers.
+
+***Published as part of Hexterika Cyberlab, the cybersecurity division of Hexterika Breaks Free.***
+
+🔐 Part of the **Hexterika Cyberlab** project series  
+📎 Website coming soon at **Hexterika Breaks Free**
