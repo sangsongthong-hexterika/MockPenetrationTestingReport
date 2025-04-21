@@ -10,7 +10,9 @@ This is just the template so I won't forget the structure. To use this template,
 
 I follow TCM Security template, but I made it eaiser to understand for me as a beginner as well as making it a markdown format. I plan to add more information based on TCM Security's template in the future.
 
-At this moment, I have no plan to convert it to PDF because I want to focus improving my report writing without needing to worry about format. The PDF conversion will come up later once I am more familiar with writing the report.
+At this stage, the report is presented in Markdown format to prioritize clarity and ease of editing while I continue to refine my reporting skills. It will be converted to PDF when required for client delivery or formal presentation.
+
+I will use this template with both mock reports and real data reports. Real clients can reference my the report to this one.
 
 When copying this file, don't forget to delete this section.
 
@@ -157,5 +159,7 @@ All other attacks not specified above were permitted by [CompanyName].
 
 ***Published as part of Hexterika Cyberlab, the cybersecurity division of Hexterika Breaks Free.***
 
-🔐 Part of the **Hexterika Cyberlab** project series  
-📎 Website coming soon at **Hexterika Breaks Free**
+🔐 Part of the [Hexterika Cyberlab](https://hexterika-breaks-free.website/cyberlab.html) project series  
+📎 Website coming soon at [Hexterika Breaks Free](https://hexterika-breaks-free.website)
+
+***Latest content edit:*** *April 22, 2025 (Content edit only - exclude any minor format or typo fixed.)*
