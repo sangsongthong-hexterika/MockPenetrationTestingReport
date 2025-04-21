@@ -28,11 +28,13 @@ When copying this file, don't forget to delete this section.
 
 1. Confidentiality Statement
 2. Disclaimer
-3. Contact Information
-4. Executive Summary
-5. Test Scope
-6. Methodology
-7. Technical Findings
+3. Legal & Data Handling
+4. Contact Information
+5. Executive Summary
+6. Test Scope
+7. Methodology
+8. Technical Findings
+9. Additional Information
 
 ## Confidentiality Statement
 
