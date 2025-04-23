@@ -2,7 +2,7 @@
 
 ---
 
-## Hexterika Cyber Lab
+## Hexterika Cyberlab
 
 ## Penetration Testing Report
 
@@ -24,7 +24,7 @@
 
 ## Confidentiality Statement
 
-This document is the exclusive property of Severnaya Auxillary Control Station and Hexterika Cyber Lab. This document contains proprietary and confidential information. Duplication, redistribution, or use, in whole or in part, in any form, requires consent of both Severnaya Auxillary Control Station and Hexterika Cyber Lab.
+This document is the exclusive property of Severnaya Auxillary Control Station and Hexterika Cyber Lab. This document contains proprietary and confidential information. Duplication, redistribution, or use, in whole or in part, in any form, requires consent of both Severnaya Auxillary Control Station and Hexterika Cyberlab.
 
 Severnaya Auxiliary Control Station may share this document with auditors under non-disclosure agreements to demonstrate penetration test requirement compliance.
 
@@ -32,7 +32,7 @@ Severnaya Auxiliary Control Station may share this document with auditors under 
 
 A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
 
-Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyber Lab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyber Lab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
+Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyberlab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyberlab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
 
 ## Legal & Data Handling
 
@@ -59,7 +59,7 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 | :------: | :-------: | :---------------------: |
 | Natalia  | Global Information Security Manager | Email: [ns@na.goldeneye](ns@na.goldeneye)|
 
-**Company:** Hexterika Cyber Lab
+**Company:** Hexterika Cyberlab
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
