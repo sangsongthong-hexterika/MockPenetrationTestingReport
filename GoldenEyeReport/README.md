@@ -14,12 +14,13 @@
 
 1. Confidentiality Statement
 2. Disclaimer
-3. Contact Information
-4. Finding Severity Ratings
+3. Legal & Data Handling
+4. Contact Information
 5. Executive Summary
 6. Test Scope
-7. Methodologies
-8. Additional Information
+7. Methodology
+8. Technical Findings
+9. Additional Information
 
 ## Confidentiality Statement
 
@@ -32,6 +33,21 @@ Severnaya Auxiliary Control Station may share this document with auditors under 
 A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
 
 Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyber Lab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyber Lab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
+
+## Legal & Data Handling
+
++ This report contains mock data unless noted otherwise.
++ Real client data will not be shared publicly without written consent.
++ Sensitive data will be anonymized, redacted (e.g., Username: [REDACTED], Password: ********), or substituted with mock data before being posted publicly.
++ Clients are entitled to up to [X] revisions. The final revision (e.g., Revision #5 for a 5-revision package) is considered the final delivery unless the client:
+  + Accepts an earlier draft
+  + Purchases additional revisions.
++ During the engagement, all client data will be securely stored in encrypted and access-controlled environments to prevent unauthorized access. This includes:
+  + Storing client data on encrypted local or cloud storage that is password-protected.
+  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.+ Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
++ Upon final delivery, all sensitive files will be handed over to the client.
++ All sensitive data will be securely deleted from Hexterika Cyberlab's system within [X days] after full payment is received, or in accordance with the terms specified for the relevant Fiverr package or custom agreement.
++ This engagement was conducted through Fiverr. All payments, revisions, and deliveries comply with Fiverr's terms of service.
 
 ---
 
@@ -47,7 +63,7 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
-| Sangsongthong C. | Penetration Tester | Email: [sangsongthong.c@hexterika-cyber-lab.work.gd](sangsongthong.c@hexterika-cyber-lab.work.gd) |
+| Sangsongthong C. | Penetration Tester | Email: [contact@example.com](contact@example.com) |
 
 ---
 
