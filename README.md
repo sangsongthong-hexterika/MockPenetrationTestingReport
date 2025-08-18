@@ -89,16 +89,16 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 
 Likelihood measures the potential of a vulnerability being exploited. Ratings are given based on the difficulty of the attack, the available tools, attacker skill level, and client environment.
 
++ **Impact**
+
+Impact measures the potential vulnerability’s effect on operations, including confidentiality, integrity, and availability of client systems and/or data, reputational harm, and financial loss.
+
 | Ratings  | Description                                         |
 |:--------:|:---------------------------------------------------:|
 | Low      | Unlikely to be exploited; minimal impact            |
 | Moderate | Exploitable with effort; some impact                |
 | High     | Likely to be exploited; major impact                |
 | Critical | Easily exploitable; full system compromise possible |
-
-+ **Impact**
-
-Impact measures the potential vulnerability’s effect on operations, including confidentiality, integrity, and availability of client systems and/or data, reputational harm, and financial loss.
 
 ---
 
