@@ -22,7 +22,7 @@ When copying this file, don't forget to delete this section.
 
 ***Client Name:*** CompanyName
 ***Date:*** 23 March 2025 (Insert the date that this draft is created.)
-***Version:*** 1.0
+***Version:*** 1.1 polished
 
 ## Tables of Content
 
@@ -47,6 +47,10 @@ This document is the exclusive property of [CompanyName] and Hexterika Cyber Lab
 A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
 
 Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyber Lab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyber Lab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
+
+### AI Assistance Disclosure
+
+Parts of this report were refined using AI-assisted technical writing tools (ChatGPT). All technical testing, analysis, and findings were conducted by Hexterika Cyberlab. AI assistance was used strictly for editing, phrasing, and improving clarity — not for technical exploitation or data collection.
 
 ## Legal & Data Handling
 
@@ -152,6 +156,12 @@ All other attacks not specified above were permitted by [CompanyName].
 
 **Finding 2:** [Another Vulnerability Name]
 (Repeat the same format for each finding)
+
+---
+
+## Conclusion
+
+Write the conclusion with actionable step CTA at the end to encourage the action.
 
 ---
 
