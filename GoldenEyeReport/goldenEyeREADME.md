@@ -8,7 +8,7 @@
 
 ***Client Name:*** Severnaya Auxillary Control Station TryHackMe
 ***Date:*** 23 March 2025
-***Version:*** 1.0
+***Version:*** 1.1 polished
 
 ## Tables of Content
 
@@ -33,6 +33,10 @@ Severnaya Auxiliary Control Station may share this document with auditors under 
 A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
 
 Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyberlab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyberlab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
+
+### AI Assistance Disclosure
+
+Parts of this report were refined using AI-assisted technical writing tools (ChatGPT). All technical testing, analysis, and findings were conducted by Hexterika Cyberlab. AI assistance was used strictly for editing, phrasing, and improving clarity — not for technical exploitation or data collection.
 
 ## Legal & Data Handling
 
@@ -79,19 +83,22 @@ Likelihood measures the potential of a vulnerability being exploited. Ratings ar
 
 Impact measures the potential vulnerability’s effect on operations, including confidentiality, integrity, and availability of client systems and/or data, reputational harm, and financial loss.
 
+| Ratings  | Description                                         |
+|:--------:|:---------------------------------------------------:|
+| Low      | Unlikely to be exploited; minimal impact            |
+| Moderate | Exploitable with effort; some impact                |
+| High     | Likely to be exploited; major impact                |
+| Critical | Easily exploitable; full system compromise possible |
+
 ---
 
 ## Executive Summary
 
 Here are the overview of critical findings.
 
-+ A discovery of an insider threat: There were some evidence of an employee intentionally leaking their credential to help an outsider to come side your company's system.
+The assessment of Severnaya Auxiliary Control Station’s infrastructure revealed multiple critical vulnerabilities that jeopardize operational integrity, user data confidentiality, and administrative control. The most severe risks include compromised administrative credentials, insider threat behavior, and remote code execution capabilities.
 
-+ Admin's password breached: This lead to administrator account compromisation.
-
-+ Leak credentials.
-
-+ RCE vulnerability from the plugin, Aspenll.
+Immediate focus should be placed on strengthening credential security, implementing strict monitoring, and hardening vulnerable plugins. Addressing these areas will reduce the risk of unauthorized access, data exfiltration, and service disruption while improving overall resilience against future attacks.
 
 ---
 
@@ -123,7 +130,7 @@ All other attacks not specified above were permitted by Severnaya Auxillary Cont
 
 ### Technical Findings
 
-**Finding 1:** Information Leakage - Exposed Login Information and User Credentials
+**Finding 1:** Client-Side Credential Exposure
 
 **Description:**
 
@@ -141,7 +148,7 @@ The system exposes sensitive information through multiple channels:
 
 **Risk:**
 
-+ **Likelyhood:** Very High
++ **Likelihood:** Critical
   + Both the exposed login URL and the usernames are easily accessible, allowing attackers to attempt unauthorized login or use this information for further attacks.
   + The exposed encoded password can easily be decoded and used to gain access to the Boris account.
   
@@ -154,16 +161,22 @@ The system exposes sensitive information through multiple channels:
 **Evidence:**
 
 ![nmapScanAndFoundLoginPage](Images/THM_GoldenEye_1_nmapScan_n_foundLoginPage.png)
+Figure 1. Nmap Scan And Found Login Page
 
 ![viewSourceCode](Images/THM_GoldenEye_2_viewSourceCode.png)
+Figure 2. View Source Code
 
 ![BorisNeedsToUpdatePasswd](Images/THM_GoldenEye_3_BorisNeedsToUpdatePasswd.png)
+Figure 3. Boris Needs To Update His Password
 
 ![crackBorisPasswdWithBurpDecoder](Images/THM_GoldenEye_3.1_crackBorisPasswdWithBurpDecoder.png)
+Figure 4. Crack Boris's Password With Burp Suite Decoder
 
 ![login](Images/THM_GoldenEye_4_login.png)
+Figure 5. Login
 
 ![loginSuccessFoundPOP3](Images/THM_GoldenEye_5_loginSuccessFoundPOP3.png)
+Figure 6. Login Success Found POP3
 
 **Remediation:**
 
@@ -199,7 +212,7 @@ The system exposes sensitive information through multiple channels:
 
 ---
 
-**Finding 2:** Weak Authentication - POP3 Password Brute-Force and Unauthorized Email Access
+**Finding 2:** Weak POP3 Authentication
 
 **Description:**
 
@@ -211,7 +224,7 @@ Although Boris did not reuse his password across different systems, the exposed 
 
 **Risk:**
 
-+ **Likelyhood:** High
++ **Likelihood:** High
   + The attack was successful using a common wordlist, indicating weak password policies. Attackers can easily brute-force accounts if strong authentication controls are not in place.
   
 + **Impact:** High
@@ -222,16 +235,22 @@ Although Boris did not reuse his password across different systems, the exposed 
 **Evidence:**
 
 ![borisPOP3Pass](Images/THM_GoldenEye_7_borisPOP3Pass.png)
+Figure 7. Boris's POP3 Password
 
 ![loginAsBorisPOP3](Images/THM_GoldenEye_8_loginAsBorisPOP3.png)
+Figure 8. Login As Boris POP3
 
 ![borisEmail2and3](Images/THM_GoldenEye_9_borisEmail2and3.png)
+Figure 9. Boris's Email 2 And 3
 
 ![natalyaPOP3Pass](Images/THM_GoldenEye_10_natalyaPOP3Pass.png)
+Figure 10. Natalya's POP3 Password
 
 ![natalyaPOP3LoginEmail1](Images/THM_GoldenEye_11_natalyaPOP3LoginEmail1.png)
+Figure 11. Natalya's POP3 Login Email
 
 ![doakPassPOP3](Images/THM_GoldenEye_19_doakPassPOP3.png)
+Figure 12. Doak's Password POP3
 
 **Remediation:**
 
@@ -253,18 +272,18 @@ Multiple user credentials were identified in plaintext within email communicatio
 
 Specifically:
 
-+ Xenia’s Moodle credentials were disclosed in an email instructing the recipient to modify their host file to access the Moodle instance.
++ Xenia's Moodle credentials were disclosed in an email instructing the recipient to modify their host file to access the Moodle instance.
 
-+ Dr. Doak’s Moodle credentials were found in an email, where Dr. Doak explicitly shared his login details with an external threat actor, aiding unauthorized access to the system.
++ Dr. Doak's Moodle credentials were found in an email, where Dr. Doak explicitly shared his login details with an external threat actor, aiding unauthorized access to the system.
 
 The exposure of login credentials in plaintext within email communications presents a significant security risk, as attackers can leverage these credentials to gain unauthorized access to internal systems without the need for further exploitation techniques such as credential stuffing or brute-force attacks.
 
 **Risk:**
 
-+ **Likelyhood:** Very High
++ **Likelihood:** Critical
   + An attacker with access to compromised email accounts can directly obtain valid credentials without additional effort.
   
-+ **Impact:** Very High
++ **Impact:** Critical
   + Unauthorized access to internal systems can lead to further compromise, unauthorized data access, and privilege escalation.
 
 **Tool Used:** `nc`, Firefox
@@ -272,8 +291,10 @@ The exposure of login credentials in plaintext within email communications prese
 **Evidence:**
 
 ![natalyaPOP3LoginEmail2AndXeniaPass](Images/THM_GoldenEye_12_natalyaPOP3LoginEmail2AndXeniaPass.png)
+Figure 13. Natalya's POP3 Login Email 2 And Xenia's Password
 
 ![loginDoakPOP3AndFoundNewCred](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
+Figure 14. Login As Doak's POP3 And Found New Credential
 
 **Remediation:**
 
@@ -291,7 +312,7 @@ The exposure of login credentials in plaintext within email communications prese
 
 ---
 
-**Finding 4:** Insider Credential Leak & Unauthorized Account Sharing
+**Finding 4:** Insider Threat: Credential Sharing
 
 **Description:**
 
@@ -299,7 +320,7 @@ During the assessment, it was discovered that Dr. Doak, an internal user, was ac
 
 **Risk:**
 
-+ **Likelyhood:** High
++ **Likelihood:** High
   + An insider willingly leaking credentials means security mechanisms like password complexity or account lockout policies are ineffective.
   
 + **Impact:** Critical
@@ -310,6 +331,7 @@ During the assessment, it was discovered that Dr. Doak, an internal user, was ac
 **Evidence:**
 
 ![loginDoakPOP3AndFoundNewCred](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
+Figure 15. Login As Doak POP3 And Found New Credential
 
 **Remediation:**
 
@@ -329,7 +351,7 @@ That file was found during an analysis of Dr. Doak's Moodle account. Insider the
 
 **Risk:**
 
-+ **Likelyhood:** High
++ **Likelihood:** High
   + Exfiltration through easily overlooked files like images is a common tactic used by insiders or attackers to bypass security controls.
   
 + **Impact:** Critical
@@ -340,12 +362,16 @@ That file was found during an analysis of Dr. Doak's Moodle account. Insider the
 **Evidence:**
 
 ![loginDoakPOP3AndFoundNewCred](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
+Figure 16. Login As Doak POP3 And Found New Credential
 
 ![drDoakSecretFile4James](Images/THM_GoldenEye_22_drDoakSecretFile4James.png)
+Figure 17. Dr. Doak's Secret File For James
 
 ![secrettextTo007](Images/THM_GoldenEye_24_secrettextTo007.png)
+Figure 18. Secret Text To 007
 
 ![dir007keyFor007Pic](Images/THM_GoldenEye_25_dir007keyFor007Pic.png)
+Figure 19. Directory 007 - Key For 007 Image
 
 **Remediation:**
 
@@ -363,7 +389,7 @@ With these credentials, an attacker could log into the Moodle platform as an adm
 
 **Risk:**
 
-+ **Likelyhood:** High
++ **Likelihood:** High
   + Since an attacker with access to the file could extract and decode the credentials without requiring prior privilege escalation.
   
 + **Impact:** Critical
@@ -374,12 +400,14 @@ With these credentials, an attacker could log into the Moodle platform as an adm
 **Evidence:**
 
 ![useExifOnFor007Pic](Images/THM_GoldenEye_26_useExifOnFor007Pic.png)
+Figure 20. Use Exiftool On For007 Image
 
 ![useBurpToDecodeTheEncodedMessageFromDoak_Base64](Images/THM_GoldenEye_27_useBurpToDecodeTheEncodedMessageFromDoak_Base64.png)
+Figure 21. Use Burp Suite To Decode The Encoded Message From Doak - Base64
 
 **Remediation:**
 
-+ Revoke all access to the company from Dr. Doak and arrest him.
++ Revoke Dr. Doak's credentials immediately. Initiate an internal investigation and, if appropriate, escalate the incident through formal security and legal channels.
 
 + Change admin account's password to prevent further breach.
 
@@ -399,7 +427,7 @@ After making the modification, the payload was triggered when attempting to spel
 
 **Risk:**
 
-+ **Likelyhood:** High
++ **Likelihood:** High
   + The vulnerability exists within Moodle's configuration, and an attacker with admin credentials can easily exploit it.
   
 + **Impact:** Critical
@@ -410,16 +438,22 @@ After making the modification, the payload was triggered when attempting to spel
 **Evidence:**
 
 ![loginMoodleAsAdmin](Images/THM_GoldenEye_27_loginMoodleAsAdmin.png)
+Figure 22. Login Moodle As Admin
 
 ![allUsers](Images/THM_GoldenEye_28_allUsers.png)
+Figure 23. All Users
 
 ![BorisIsAdmin](Images/THM_GoldenEye_29_BorisIsAdmin.png)
+Figure 24. Boris Is Admin
 
 ![AddRevShellCodeToAspellAndChangeSpellEngineToPSpellShell](Images/THM_GoldenEye_30_AddRevShellCodeToAspellAndChangeSpellEngineToPSpellShell.png)
+Figure 25. AddRevShellCodeToAspellAndChangeSpellEngineToPSpellShell
 
 ![spellCheck](Images/THM_GoldenEye_31_spellCheck.png)
+Figure 26. Spell Check
 
 ![igotashell](Images/THM_GoldenEye_32_igotashell.png)
+Figure 27. I Got A Shell
 
 **Remediation:**
 
@@ -433,47 +467,59 @@ After making the modification, the payload was triggered when attempting to spel
 
 ---
 
-**Finding 8:** Allowing Download from HTTP Without Antivirus Scanning for Exploit Files
+**Finding 8:** Unsecured File Transfers Allow Malware Delivery
 
 **Description:**
 
-The system allows files to be downloaded via HTTP without any secure transmission (HTTP instead of HTTPS) and without antivirus scanning or malware detection for files. An attacker could use this to deliver exploit files or malicious payloads to the system, potentially leading to further exploitation.
+The system permits file downloads via unencrypted HTTP, with no antivirus scanning or malware detection in place. This creates a high likelihood of malicious payload delivery and execution, exposing the environment to compromise.
 
 **Risk:**
 
-+ **Likelyhood:** High
-  + The lack of secure file transfer protocols (such as HTTPS) makes it easier for attackers to exploit this weakness and deliver malicious files. Furthermore, the absence of antivirus scanning increases the likelihood of malicious payloads being executed.
++ **Likelihood:** High
+  + Unencrypted transfers and lack of scanning make exploitation straightforward.
   
 + **Impact:** Critical
-  + Privilege Escalation: Malicious files could be used to escalate privileges, gaining unauthorized access to the system.
+  + Successful exploitation could enable privilege escalation, full system compromise, and long-term persistence.
 
   + System Compromise: Exploit files could compromise the system, leading to full control of the target machine, potentially resulting in data theft, backdoor installation, or further system exploitation.
 
-**Tool Used:** python web server, exploit file
+**Tool Used:** python web server, custom exploit file
 
 **Evidence:**
 
 ![setupPythonServer](Images/THM_GoldenEye_33_setupPythonServer.png)
+Figure 28. Set Up Python Server
 
 ![wgetLinuxPrivCheckerPy](Images/THM_GoldenEye_34_wgetLinuxPrivCheckerPy.png)
+Figure 29. Wget Linux Privilege Checker Python
 
 ![downloadFilesFromMyKali](Images/THM_GoldenEye_35_downloadFilesFromMyKali.png)
+Figure 30. Download Files From My Kali Linux
 
 ![downloadMaliciousFile](Images/THM_GoldenEye_37_sendingTheExploitAfterMakingChangeToIt.png)
+Figure 31. Download A Malicious File
 
 ![successfulExploitRuningGainRoot](Images/THM_GoldenEye_38_successfulExploitRuningGainRoot.png)
+Figure 32. Successful Exploit Running Gains Root
 
 ![getRootFlag](Images/THM_GoldenEye_40_getRootFlag.png)
+Figure 33. Get Root Flag
 
 **Remediation:**
 
-+ Restrict file downloads to trusted sources and ensure that any file transfer process is secured to prevent unauthorized files from being delivered.
++ Restrict downloads to trusted sources only.
 
-+ Use secure file transfer protocols like HTTPS to protect file integrity during transmission, even though MITM wasn’t performed here. Ensuring encrypted file transfers would help making unauthorized users from sending potentially harmful files more difficult.
++ Enforce secure transfer protocols (HTTPS).
 
-+ Scan files for malicious content before allowing their download or execution.
++ Integrate antivirus and malware scanning into file handling processes.
 
-+ Use a combination of antivirus software and a host-based IPS to provide layered protection. Ensure both systems are updated regularly with the latest signatures and detection rules.
++ Deploy host-based intrusion prevention to detect and block malicious payloads.
+
+## Conclusion
+
+The penetration test identified significant issues, including credential leakage, weak authentication mechanisms, and remote code execution vulnerabilities.
+
+By prioritizing remediation of exposed credentials, enforcing stronger authentication controls, and removing or securing high-risk plugins, Severnaya Auxiliary Control Station can substantially reduce its attack surface. Implementing these measures, alongside continuous monitoring and employee awareness training, will align the organization’s defenses with industry best practices and strengthen long-term security posture.
 
 ---
 
@@ -490,10 +536,13 @@ Here are the credentials leaked that I got from POP3 brute-forcing.
 Evidences:
 
 ![borisPOP3Pass](Images/THM_GoldenEye_7_borisPOP3Pass.png)
+Figure 34. Boris's POP3 Password
 
 ![natalyaPOP3Pass](Images/THM_GoldenEye_10_natalyaPOP3Pass.png)
+Figure 35. Natalya's POP3 Password
 
 ![doakPassPOP3](Images/THM_GoldenEye_19_doakPassPOP3.png)
+Figure 36. Doak's POP3 Password
 
 Here is Boris's GoldenEye login credential.
 
@@ -504,12 +553,15 @@ Here is Boris's GoldenEye login credential.
 Evidence:
 
 ![crackBorisPasswdWithBurpDecoder](Images/THM_GoldenEye_3.1_crackBorisPasswdWithBurpDecoder.png)
+Figure 37. Crack Boris's Password With Burp Suit Decoder
 
 Here is the credentials leaked in plaintext.
 
 ![XeniaMoodleCredentialLeakInPlaintext](Images/THM_GoldenEye_12_natalyaPOP3LoginEmail2AndXeniaPass.png)
+Figure 38. Xenia's Moodle Credential Leak In Plaintext
 
 ![dr_doakMoodleCredentialLeakInPlaintext](Images/THM_GoldenEye_20_loginDoakPOP3AndFoundNewCred.png)
+Figure 39. Dr.Doak's Moodle Credential Leak In Plaintext
 
 ---
 
@@ -523,4 +575,4 @@ Here is the credentials leaked in plaintext.
 ***Published as part of Hexterika Cyberlab, the cybersecurity division of Hexterika Breaks Free.***
 
 🔐 Part of the **Hexterika Cyberlab** project series  
-📎 Website coming soon at **Hexterika Breaks Free**
+📎 Website: [Hexterika-Breaks-Free](https://hexterika-breaks-free.website/)
