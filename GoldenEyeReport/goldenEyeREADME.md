@@ -6,7 +6,7 @@
 
 ## Penetration Testing Report
 
-***Client Name:*** Severnaya Auxillary Control Station TryHackMe  
+***Client Name:*** Severnaya Auxiliary Control Station TryHackMe  
 ***Date:*** 19 August 2025  
 ***Version:*** 1.1 polished
 
