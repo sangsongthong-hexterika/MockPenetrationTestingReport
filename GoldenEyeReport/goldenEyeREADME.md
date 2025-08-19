@@ -567,12 +567,15 @@ Figure 39. Dr.Doak's Moodle Credential Leak In Plaintext
 
 **Author & Publisher:** Sangsongthong Chantaranothai
 
-**Date Published:** March 28, 2025
-*(Based on the commit where the full walkthrough was completed. Later commits are minor edits or additions.)*
+**Date Published:** March 2025
+(Based on the commit where the full technical report template was completed. Subsequent edits and restructuring were made after filing this CEU/CPE claim. The original version is preserved in GitHub commit history for reference.)
 
-**Purpose:** Created as part of ongoing professional development to earn CEU/CPE credits for CompTIA and ISC2 certifications. Also intended to showcase cybersecurity skills, support Hexterika Cyberlab's portfolio, and demonstrate project quality to future clients and employers.
+**Latest Content Edit:** August 19, 2025
+(Content edits only – excludes minor formatting or typo fixes.)
 
-***Published as part of Hexterika Cyberlab, the cybersecurity division of Hexterika Breaks Free.***
+This report was authored and published by me as part of my professional development in cybersecurity.
+In addition, it is featured as a portfolio sample within my freelancing service brand, Hexterika Cyberlab.
 
-🔐 Part of the **Hexterika Cyberlab** project series  
-📎 Website: [Hexterika-Breaks-Free](https://hexterika-breaks-free.website/)
+🌐 Portfolio: [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
+🌐 Services: [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
+🌐 Main Site: [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
