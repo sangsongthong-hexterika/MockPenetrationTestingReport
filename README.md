@@ -51,9 +51,9 @@ The template is stored in /MockReport/ReportTemplate.md for reuse.
 
 This repo is part of my cybersecurity portfolio. Reports may also be featured under Hexterika Cyberlab, my freelancing service brand for IT support and cybersecurity projects.
 
-🌐 **Portfolio:** [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
-🌐 **Services:** [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
-🌐 **Main Site:** [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
+🌐 **Portfolio:** [Portfolio](https://hexterika-breaks-free.website/portfolio.html)  
+🌐 **Services:** [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)  
+🌐 **Main Site:** [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)  
 
 ## Latest Update
 
