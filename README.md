@@ -41,6 +41,10 @@ The template is stored in /MockReport/ReportTemplate.md for reuse.
 
 + **For Learning** – Others may reference this structure as a guide for writing penetration testing reports.
 
+## Available Reports
+
++ [GoldenEye TryHackMe](https://github.com/sangsongthong-hexterika/MockPenetrationTestingReport/blob/main/GoldenEyeReport/goldenEyeREADME.md)
+
 ## Author & Branding
 
 **Author:** Sangsongthong Chantaranothai
