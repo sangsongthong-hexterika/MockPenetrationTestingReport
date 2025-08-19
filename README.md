@@ -1,186 +1,56 @@
-# Mock Penetration Testing Report Based On Various Lab
+# Mock Penetration Testing Reports
 
----
+## Overview
 
-## Hexterika Cyberlab
+This repository contains mock penetration testing reports based on lab environments (e.g., TryHackMe, PortSwigger Academy, AD Pentest Labs, etc).
+These reports are written in a professional, client-facing style, following industry templates adapted for Markdown.
 
-## Author's Note
+## The repo serves three purposes
 
-This is just the template so I won't forget the structure. To use this template, just copy this README.md file except this paragraph and use it in the README.md file in your specific report.
++ Portfolio – showcasing technical writing, penetration testing methodology, and client-style deliverables.
 
-I follow TCM Security template, but I made it eaiser to understand for me as a beginner as well as making it a markdown format. I plan to add more information based on TCM Security's template in the future.
++ Professional Development – reports are used for CEU/CPE credits (CompTIA, ISC², etc.).
 
-At this stage, the report is presented in Markdown format to prioritize clarity and ease of editing while I continue to refine my reporting skills. It will be converted to PDF when required for client delivery or formal presentation.
++ Freelancing Readiness – the same reporting structure will be applied to real client projects under Hexterika Cyberlab.
 
-I will use this template with both mock reports and real data reports. Real clients can reference my the report to this one.
+## Repository Structure
 
-When copying this file, don't forget to delete this section.
++ /MockReport/GoldenEyeReport/ → Report based on TryHackMe’s GoldenEye room.
 
----
++ /MockReport/AD-Pentest/ → Reports based on AD Pentest lab series.
 
-## Penetration Testing Report
++ /MockReport/[FutureReports]/ → Selected labs or engagements that demonstrate important findings.
 
-***Client Name:*** CompanyName
-***Date:*** 23 March 2025 (Insert the date that this draft is created.)
-***Version:*** 1.1 polished
+Not all labs get a report. Only selected cases with meaningful findings are formalized here.
 
-## Tables of Content
+## Template Versioning
 
-1. Confidentiality Statement
-2. Disclaimer
-3. Legal & Data Handling
-4. Contact Information
-5. Executive Summary
-6. Test Scope
-7. Methodology
-8. Technical Findings
-9. Additional Information
++ Reports in this repository are based on the evolving Mock Penetration Testing Report Template:
 
-## Confidentiality Statement
++ Version 1.x – Initial structure (used in early reports).
 
-This document is the exclusive property of [CompanyName] and Hexterika Cyber Lab. This document contains proprietary and confidential information. Duplication, redistribution, or use, in whole or in part, in any form, requires consent of both [CompanyName] and Hexterika Cyber Lab.
++ Version 2.x – Current structure (added Conclusion, AI Assistance Disclosure, refined severity ratings).
 
-[CompanyName] may share this document with auditors under non-disclosure agreements to demonstrate penetration test requirement compliance.
+The template is stored in /MockReport/ReportTemplate.md for reuse.
 
-## Disclaimer
+## Usage
 
-A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
++ **For CEU/CPE Claims** – Each report's commit history preserves its original publish date. Subsequent edits for clarity or structure are logged transparently.
 
-Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyber Lab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyber Lab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
++ **For Clients** – Reports here demonstrate the professionalism, structure, and clarity that will also be used for real engagements.
 
-### AI Assistance Disclosure
++ **For Learning** – Others may reference this structure as a guide for writing penetration testing reports.
 
-Parts of this report were refined using AI-assisted technical writing tools (ChatGPT). All technical testing, analysis, and findings were conducted by Hexterika Cyberlab. AI assistance was used strictly for editing, phrasing, and improving clarity — not for technical exploitation or data collection.
+## Author & Branding
 
-## Legal & Data Handling
+**Author:** Sangsongthong Chantaranothai
 
-+ This report contains mock data unless noted otherwise.
-+ Real client data will not be shared publicly without written consent.
-+ Sensitive data will be anonymized, redacted (e.g., Username: [REDACTED], Password: ********), or substituted with mock data before being posted publicly.
-+ Clients are entitled to up to [X] revisions. The final revision (e.g., Revision #5 for a 5-revision package) is considered the final delivery unless the client:
-  + Accepts an earlier draft
-  + Purchases additional revisions.
-+ During the engagement, all client data will be securely stored in encrypted and access-controlled environments to prevent unauthorized access. This includes:
-  + Storing client data on encrypted local or cloud storage that is password-protected.
-  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.+ Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
-+ Upon final delivery, all sensitive files will be handed over to the client.
-+ All sensitive data will be securely deleted from Hexterika Cyberlab's system within [X days] after full payment is received, or in accordance with the terms specified for the relevant Fiverr package or custom agreement.
-+ This engagement was conducted through Fiverr. All payments, revisions, and deliveries comply with Fiverr's terms of service.
+This repo is part of my cybersecurity portfolio. Reports may also be featured under Hexterika Cyberlab, my freelancing service brand for IT support and cybersecurity projects.
 
----
+🌐 **Portfolio:** [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
+🌐 **Services:** [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
+🌐 **Main Site:** [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
 
-## Contact Information
+## Latest Update
 
-**Company:** [CompanyName]
-
-| **Name** | **Title** | **Contact Information** |
-| :------: | :-------: | :---------------------: |
-| Natalia  | Global Information Security Manager | Email: [insertEmail] |
-
-**Company:** Hexterika Cyber Lab
-
-| **Name** | **Title** | **Contact Information** |
-| :------: | :-------: | :---------------------: |
-| Sangsongthong C. | Penetration Tester | Email: [insertEmail] |
-
----
-
-## Finding Severity Ratings
-
-**Risk Factors** Risk is measured by two factors: Likelihood and Impact:
-
-+ **Likelihood**
-
-Likelihood measures the potential of a vulnerability being exploited. Ratings are given based on the difficulty of the attack, the available tools, attacker skill level, and client environment.
-
-+ **Impact**
-
-Impact measures the potential vulnerability’s effect on operations, including confidentiality, integrity, and availability of client systems and/or data, reputational harm, and financial loss.
-
-| Ratings  | Description                                         |
-|:--------:|:---------------------------------------------------:|
-| Low      | Unlikely to be exploited; minimal impact            |
-| Moderate | Exploitable with effort; some impact                |
-| High     | Likely to be exploited; major impact                |
-| Critical | Easily exploitable; full system compromise possible |
-
----
-
-## Executive Summary
-
-Summary of Findings: Brief overview of critical findings.
-
----
-
-## Test Scope
-
-**Target Systems:** List of IPs, domains, etc.
-
-**Scope Exclusions:** Mention anything that was outside the test.
-
-Per client request, Hexterika Cyber Lab did not perform any of the following attacks during testing:
-
-+ Denial of Service (DoS)
-
-+ Phishing/Social Engineering
-
-All other attacks not specified above were permitted by [CompanyName].
-
-**Client Allowances:** Mention anything that client allows.
-
-+ Internal access to network via VPN
-
-**Testing Period:** [Dates of Testing].
-
----
-
-## Methodology
-
-### Technical Findings
-
-**Finding 1:** [Vulnerability Name]
-
-**Description:** A detailed description of the vulnerability.
-
-**Risk:** How this vulnerability could affect the system.
-
-+ **Likelyhood:**
-  
-+ **Impact:**
-
-**Tool Used:** [toolName]
-
-**Evidence:** Insert screenshots
-
-**Remediation:** Steps to fix or mitigate the vulnerability.
-
-**Finding 2:** [Another Vulnerability Name]
-(Repeat the same format for each finding)
-
----
-
-## Conclusion
-
-Write the conclusion with actionable step CTA at the end to encourage the action.
-
----
-
-## Additional Information
-
----
-
-**Author & Publisher:** Sangsongthong Chantaranothai
-
-**Date Published:** March 2025
-(Based on the commit where the full technical report template was completed. Subsequent edits and restructuring were made after filing this CEU/CPE claim. The original version is preserved in GitHub commit history for reference.)
-
-**Latest Content Edit:** August 19, 2025
-(Content edits only – excludes minor formatting or typo fixes.)
-
-This report was authored and published by me as part of my professional development in cybersecurity.
-In addition, it is featured as a portfolio sample within my freelancing service brand, Hexterika Cyberlab.
-
-🌐 Portfolio: [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
-🌐 Services: [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
-🌐 Main Site: [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
-
+**Template Version:** 2.0 (August 19, 2025)
