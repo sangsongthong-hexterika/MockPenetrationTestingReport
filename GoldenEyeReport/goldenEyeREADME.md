@@ -576,6 +576,4 @@ Figure 39. Dr.Doak's Moodle Credential Leak In Plaintext
 This report was authored and published by me as part of my professional development in cybersecurity.
 In addition, it is featured as a portfolio sample within my freelancing service brand, Hexterika Cyberlab.
 
-🌐 Portfolio: [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
-🌐 Services: [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
-🌐 Main Site: [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
+🌐 [LinkedIn](https://www.linkedin.com/in/sangsongthong-chantaranothai-sec/)
