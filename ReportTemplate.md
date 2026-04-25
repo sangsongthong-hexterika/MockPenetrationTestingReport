@@ -70,7 +70,7 @@ Parts of this report were refined using AI-assisted technical writing tools (Cha
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
-| Natalia  | Global Information Security Manager | Email: [insertEmail] |
+| Natalia | Global Information Security Manager | Email: [insertEmail] |
 
 **Company:** Hexterika Cyber Lab
 
