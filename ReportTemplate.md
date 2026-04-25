@@ -45,7 +45,7 @@ Time-limited engagements do not allow for a full evaluation of all security cont
 
 ### AI Assistance Disclosure
 
-Parts of this report were refined using AI-assisted technical writing tools (ChatGPT). All technical testing, analysis, and findings were conducted by Hexterika Cyberlab. AI assistance was used strictly for editing, phrasing, and improving clarity — not for technical exploitation or data collection.
+Parts of this report were refined using AI-assisted writing tools for editing, phrasing, and clarity. All technical testing, analysis, and findings were conducted by Hexterika Cyberlab. AI was not used for technical exploitation or data collection.
 
 ## Legal & Data Handling
 
@@ -60,7 +60,6 @@ Parts of this report were refined using AI-assisted technical writing tools (Cha
   + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.+ Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
 + Upon final delivery, all sensitive files will be handed over to the client.
 + All sensitive data will be securely deleted from Hexterika Cyberlab's system within [X days] after full payment is received, or in accordance with the terms specified for the relevant Fiverr package or custom agreement.
-+ This engagement was conducted through Fiverr. All payments, revisions, and deliveries comply with Fiverr's terms of service.
 
 ---
 
