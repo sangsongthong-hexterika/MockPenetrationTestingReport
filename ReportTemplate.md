@@ -165,17 +165,20 @@ Text Here
 
 ---
 
-**Author & Publisher:** Sangsongthong Chantaranothai
+## Footnote
 
-**Date Published:** March 2025
-(Based on the commit where the full technical report template was completed. Subsequent edits and restructuring were made after filing this CEU/CPE claim. The original version is preserved in GitHub commit history for reference.)
+**Author & Publisher:** Sangsongthong Chantaranothai | Hexterika Cyberlab
 
-**Latest Content Edit:** August 19, 2025
-(Content edits only – excludes minor formatting or typo fixes.)
+**Date Published:** March 2025  
+*(Based on the commit where the full technical report template was completed.
+Subsequent edits and restructuring were made after filing this CEU/CPE claim.
+The original version is preserved in GitHub commit history for reference.)*
 
-This report was authored and published by me as part of my professional development in cybersecurity.
-In addition, it is featured as a portfolio sample within my freelancing service brand, Hexterika Cyberlab.
+**Latest Content Edit:** April 25, 2026  
+*(Content edits only – excludes minor formatting or typo fixes.)*  
+*Changes: Revised AI Assistance Disclosure section. Removed platform-specific payment and revision terms.*
 
-🌐 Portfolio: [Portfolio](https://hexterika-breaks-free.website/portfolio.html)
-🌐 Services: [Hexterika Cyberlab Services](https://hexterika-breaks-free.website/hexterika-cyberlab-services.html)
-🌐 Main Site: [Hexterika Breaks Free](https://hexterika-breaks-free.website/index.html)
+This report was authored and published as part of my professional development
+in cybersecurity and is featured as a portfolio sample under Hexterika Cyberlab.
+
+[LinkedIn](https://www.linkedin.com/in/sangsongthong-chantaranothai-sec/)
