@@ -61,7 +61,7 @@ Parts of this report were refined using AI-assisted technical writing tools (Cha
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
-| Natalia | Global Information Security Manager | Email: [ns@na.goldeneye](ns@na.goldeneye) |
+| Natalya | Global Information Security Manager | Email: [ns@na.goldeneye](ns@na.goldeneye) |
 
 **Company:** Hexterika Cyberlab
 
