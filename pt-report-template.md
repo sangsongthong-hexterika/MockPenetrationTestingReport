@@ -5,16 +5,18 @@
 This is a reusable template for creating new mock or client-facing penetration testing reports.  
 When starting a new report, copy this file into the relevant subfolder and replace placeholders.
 
-**Template Version:** 2.0
+**Template Version:** 2.1.0
+*(Version x.y.z - x means there is a major change in everything that it is worth disregard the previous version - y means adding some new info/topic - z means fixing typo or rearrange info without adding new info)*
 *(Reports created before August 19, 2025 may follow version 1.x structure.)*
 
 ---
 
 ## Penetration Testing Report
 
-***Client Name:*** [CompanyName]  
-***Date:*** [Date]  
-***Version:*** [2.x]
+***Client Name:*** [CompanyName]
+***Date:*** [Date]
+***Client Report Version:*** [1.1.0] *(Note that this part is the version of the report itself which is different from my report template version)*
+***Report Template Version:*** [2.1.0] *(This refers to the version of the report template that I use for the work with the particular assessment case, labs or clients. This prevent switching the template format mid assessment.)*
 
 ## Tables of Content
 
@@ -33,7 +35,7 @@ When starting a new report, copy this file into the relevant subfolder and repla
 
 ## Confidentiality Statement
 
-This document is the exclusive property of [CompanyName] and Hexterika Cyber Lab. This document contains proprietary and confidential information. Duplication, redistribution, or use, in whole or in part, in any form, requires consent of both [CompanyName] and Hexterika Cyber Lab.
+This document is the exclusive property of [CompanyName] and Hexterika Cyberlab. This document contains proprietary and confidential information. Duplication, redistribution, or use, in whole or in part, in any form, requires consent of both [CompanyName] and Hexterika Cyberlab.
 
 [CompanyName] may share this document with auditors under non-disclosure agreements to demonstrate penetration test requirement compliance.
 
@@ -41,7 +43,7 @@ This document is the exclusive property of [CompanyName] and Hexterika Cyber Lab
 
 A penetration test is considered a snapshot in time. The findings and recommendations reflect the information gathered during the assessment and not any changes or modifications made outside of that period.
 
-Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyber Lab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyber Lab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
+Time-limited engagements do not allow for a full evaluation of all security controls. Hexterika Cyberlab prioritized the assessment to identify the weakest security controls an attacker would exploit. Hexterika Cyberlab recommends conducting similar assessments on an annual basis by internal or third-party assessors to ensure the continued success of the controls.
 
 ### AI Assistance Disclosure
 
@@ -71,7 +73,7 @@ Parts of this report were refined using AI-assisted writing tools for editing, p
 | :------: | :-------: | :---------------------: |
 | Natalia | Global Information Security Manager | Email: [insertEmail] |
 
-**Company:** Hexterika Cyber Lab
+**Company:** Hexterika Cyberlab
 
 | **Name** | **Title** | **Contact Information** |
 | :------: | :-------: | :---------------------: |
@@ -174,9 +176,8 @@ Text Here
 Subsequent edits and restructuring were made after filing this CEU/CPE claim.
 The original version is preserved in GitHub commit history for reference.)*
 
-**Latest Content Edit:** April 25, 2026  
-*(Content edits only – excludes minor formatting or typo fixes.)*  
-*Changes: Revised AI Assistance Disclosure section. Removed platform-specific payment and revision terms.*
+**Latest Content Edit:** July 28, 2026
+*(Content edits - Fix the name Hexterika Cyber Lab and Hexterika Cyberlab and change it into Hexterika Cyberlab for consistency and state the versioning rule with better structure. While the fix are minor, they are important fix so the number of the template version 2.0.0 change to 2.1.0. The logic is if the change is neglectible then version 2.0.0 and 2.0.1 will not differ significantly but version 2.0.0 and 2.1.0 has some non-neglectible minor changes while version 1.0.0 and 2.0.0 has structural and many changes that can significantly confuse the audience if they attempt to compare the information. This doesn't mean the version 1.0.0 is terrible. It just means that version was based on the previous format that is no longer my current one.)*
 
 This report was authored and published as part of my professional development
 in cybersecurity and is featured as a portfolio sample under Hexterika Cyberlab.
