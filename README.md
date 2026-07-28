@@ -44,6 +44,18 @@ Each report notes which template version it was written under to preserve docume
 
 + [GoldenEye TryHackMe](https://github.com/sangsongthong-hexterika/MockPenetrationTestingReport/blob/main/GoldenEyeReport/goldenEyeREADME.md)
 
+## Third-Party Content
+
+This repository may include screenshots, trademarks, product names, logos, lab content, or other materials from third-party platforms, including but not limited to:
+
++ TryHackMe
++ Hack The Box
++ PortSwigger Web Security Academy
+
+Such materials remain the property of their respective owners and are included solely for educational, documentation, and professional portfolio purposes.
+
+The MIT License applies only to the original content created for this repository and does not grant rights to third-party intellectual property.
+
 ## Author
 
 **Sangsongthong Chantaranothai** | Hexterika Cyberlab  
