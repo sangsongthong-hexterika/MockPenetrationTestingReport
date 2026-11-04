@@ -12,12 +12,11 @@ These reports are written in a professional, client-facing style, following indu
 
 + Professional Development – reports are used for CEU/CPE credits (CompTIA, ISC², etc.).
 
-+ Freelancing Readiness – the same reporting structure will be applied to real client projects under Hexterika Cyberlab.
++ Report writing – a reusable, versioned reporting structure for future engagements under Hexterika Cyberlab.
 
 ## Repository Structure
 
 + /GoldenEyeReport/ → Report based on TryHackMe's GoldenEye room
-+ /AD-Pentest/ → Coming soon. Lab environment built; attack phase and report pending
 
 Not all labs get a report. Only selected cases with meaningful findings are formalized here.
 
@@ -28,7 +27,7 @@ Reports in this repository use a versioned template structure:
 + Version 1.x – Initial structure
 + Version 2.x – Current structure
 
-The template is stored in ReportTemplate.md for reuse.
+The template is stored in [pt-report-template.md](pt-report-template.md) for reuse.
 
 Each report notes which template version it was written under to preserve documentation integrity for CEU/CPE claims.
 
