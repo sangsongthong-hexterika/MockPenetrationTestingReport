@@ -8,7 +8,7 @@
 
 ***Client Name:*** Severnaya Auxiliary Control Station TryHackMe  
 ***Date:*** 19 August 2025  
-***Version:*** 1.1 polished
+***Version:*** 1.1.1 polished
 
 ## Tables of Content
 
@@ -43,15 +43,13 @@ Parts of this report were refined using AI-assisted technical writing tools (Cha
 + This report contains mock data unless noted otherwise.
 + Real client data will not be shared publicly without written consent.
 + Sensitive data will be anonymized, redacted (e.g., Username: [REDACTED], Password: ********), or substituted with mock data before being posted publicly.
-+ Clients are entitled to up to [X] revisions. The final revision (e.g., Revision #5 for a 5-revision package) is considered the final delivery unless the client:
-  + Accepts an earlier draft
-  + Purchases additional revisions.
++ Clients are entitled to up to 3 revisions.
 + During the engagement, all client data will be securely stored in encrypted and access-controlled environments to prevent unauthorized access. This includes:
   + Storing client data on encrypted local or cloud storage that is password-protected.
-  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.+ Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
+  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.
+  + Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
 + Upon final delivery, all sensitive files will be handed over to the client.
-+ All sensitive data will be securely deleted from Hexterika Cyberlab's system within [X days] after full payment is received, or in accordance with the terms specified for the relevant Fiverr package or custom agreement.
-+ This engagement was conducted through Fiverr. All payments, revisions, and deliveries comply with Fiverr's terms of service.
++ All sensitive data will be securely deleted from Hexterika Cyberlab's system once the final delivery has been handed over.
 
 ---
 
@@ -565,15 +563,18 @@ Figure 39. Dr.Doak's Moodle Credential Leak In Plaintext
 
 ---
 
-**Author & Publisher:** Sangsongthong Chantaranothai
+## Footnote
 
-**Date Published:** March 2025
-(Based on the commit where the full technical report template was completed. Subsequent edits and restructuring were made after filing this CEU/CPE claim. The original version is preserved in GitHub commit history for reference.)
+**Author & Publisher:** Sangsongthong Chantaranothai, founder and sole operator of Hexterika Cyberlab
 
-**Latest Content Edit:** August 19, 2025
-(Content edits only – excludes minor formatting or typo fixes.)
+**Date Published:** March 2025  
+*(Based on the commit where the full technical report template was completed.
+Subsequent edits and restructuring were made after filing this CEU/CPE claim.
+The original version is preserved in GitHub commit history for reference.)*
 
-This report was authored and published by me as part of my professional development in cybersecurity.
-In addition, it is featured as a portfolio sample within my freelancing service brand, Hexterika Cyberlab.
+**Latest Content Edit:** November 23, 2026  
+*(Revised the Legal & Data Handling section to set the revision limit and clarify when client data is deleted. Updated this footnote.)*
 
-🌐 [LinkedIn](https://www.linkedin.com/in/sangsongthong-chantaranothai-sec/)
+This report was authored and published as part of my professional development in cybersecurity and is featured as a portfolio sample under Hexterika Cyberlab and under Sangsongthong Chantaranothai, the founder and sole operator of Hexterika Cyberlab. All work published under the Hexterika Cyberlab name is performed solely by the author.
+
+[LinkedIn](https://www.linkedin.com/in/sangsongthong-chantaranothai-sec/)
