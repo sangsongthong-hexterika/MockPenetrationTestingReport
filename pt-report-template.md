@@ -54,9 +54,7 @@ Parts of this report were refined using AI-assisted writing tools for editing, p
 + This report contains mock data unless noted otherwise.
 + Real client data will not be shared publicly without written consent.
 + Sensitive data will be anonymized, redacted (e.g., Username: [REDACTED], Password: ********), or substituted with mock data before being posted publicly.
-+ Clients are entitled to up to 3 revisions after the first draft. Every version, from the first draft to the third revision, is kept until final delivery.
-+ Final delivery is the version the client selects, from the first draft to the latest version delivered. If the client does not select a version within 7 days of receiving the latest version, that latest version is the final delivery.
-+ Further revisions beyond the third require a new agreement and additional payment.
++ Clients are entitled to up to 3 revisions.
 + During the engagement, all client data will be securely stored in encrypted and access-controlled environments to prevent unauthorized access. This includes:
   + Storing client data on encrypted local or cloud storage that is password-protected.
   + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.
