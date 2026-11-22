@@ -54,14 +54,15 @@ Parts of this report were refined using AI-assisted writing tools for editing, p
 + This report contains mock data unless noted otherwise.
 + Real client data will not be shared publicly without written consent.
 + Sensitive data will be anonymized, redacted (e.g., Username: [REDACTED], Password: ********), or substituted with mock data before being posted publicly.
-+ Clients are entitled to up to [X] revisions. The final revision (e.g., Revision #5 for a 5-revision package) is considered the final delivery unless the client:
-  + Accepts an earlier draft
-  + Purchases additional revisions.
++ Clients are entitled to up to 3 revisions after the first draft. Every version, from the first draft to the third revision, is kept until final delivery.
++ Final delivery is the version the client selects, from the first draft to the latest version delivered. If the client does not select a version within 7 days of receiving the latest version, that latest version is the final delivery.
++ Further revisions beyond the third require a new agreement and additional payment.
 + During the engagement, all client data will be securely stored in encrypted and access-controlled environments to prevent unauthorized access. This includes:
   + Storing client data on encrypted local or cloud storage that is password-protected.
-  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.+ Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
+  + Limiting access to the data to only myself and the client. In the case of a legal requirement (e.g., court order), I will comply with applicable laws for data sharing.
+  + Using strong, unique passwords and enabling multi-factor authentication (MFA) for any accounts or systems where client data is stored.
 + Upon final delivery, all sensitive files will be handed over to the client.
-+ All sensitive data will be securely deleted from Hexterika Cyberlab's system within [X days] after full payment is received, or in accordance with the terms specified for the relevant Fiverr package or custom agreement.
++ All sensitive data will be securely deleted from Hexterika Cyberlab's system once the final delivery has been handed over.
 
 ---
 
@@ -169,17 +170,16 @@ Text Here
 
 ## Footnote
 
-**Author & Publisher:** Sangsongthong Chantaranothai | Hexterika Cyberlab
+**Author & Publisher:** Sangsongthong Chantaranothai, founder and sole operator of Hexterika Cyberlab
 
 **Date Published:** March 2025  
 *(Based on the commit where the full technical report template was completed.
 Subsequent edits and restructuring were made after filing this CEU/CPE claim.
 The original version is preserved in GitHub commit history for reference.)*
 
-**Latest Content Edit:** July 28, 2026
-*(Content edits - Fix the name Hexterika Cyber Lab and Hexterika Cyberlab and change it into Hexterika Cyberlab for consistency and state the versioning rule with better structure. While the fix are minor, they are important fix so the number of the template version 2.0.0 change to 2.1.0. The logic is if the change is neglectible then version 2.0.0 and 2.0.1 will not differ significantly but version 2.0.0 and 2.1.0 has some non-neglectible minor changes while version 1.0.0 and 2.0.0 has structural and many changes that can significantly confuse the audience if they attempt to compare the information. This doesn't mean the version 1.0.0 is terrible. It just means that version was based on the previous format that is no longer my current one.)*
+**Latest Content Edit:** November 22, 2026  
+*(Revised the Legal & Data Handling section to define the revision limit, how final delivery is determined, and when client data is deleted. Updated this footnote.)*
 
-This report was authored and published as part of my professional development
-in cybersecurity and is featured as a portfolio sample under Hexterika Cyberlab.
+This report was authored and published as part of my professional development in cybersecurity and is featured as a portfolio sample under Hexterika Cyberlab and under Sangsongthong Chantaranothai, the founder and sole operator of Hexterika Cyberlab. All work published under the Hexterika Cyberlab name is performed solely by the author.
 
 [LinkedIn](https://www.linkedin.com/in/sangsongthong-chantaranothai-sec/)
