@@ -5,7 +5,7 @@
 This is a reusable template for creating new mock or client-facing penetration testing reports.  
 When starting a new report, copy this file into the relevant subfolder and replace placeholders.
 
-**Template Version:** 2.1.0
+**Template Version:** 2.1.1
 *(Version x.y.z - x means there is a major change in everything that it is worth disregard the previous version - y means adding some new info/topic - z means fixing typo or rearrange info without adding new info)*
 *(Reports created before August 19, 2025 may follow version 1.x structure.)*
 
@@ -16,7 +16,7 @@ When starting a new report, copy this file into the relevant subfolder and repla
 ***Client Name:*** [CompanyName]
 ***Date:*** [Date]
 ***Client Report Version:*** [1.1.0] *(Note that this part is the version of the report itself which is different from my report template version)*
-***Report Template Version:*** [2.1.0] *(This refers to the version of the report template that I use for the work with the particular assessment case, labs or clients. This prevent switching the template format mid assessment.)*
+***Report Template Version:*** [2.1.1] *(This refers to the version of the report template that I use for the work with the particular assessment case, labs or clients. This prevent switching the template format mid assessment.)*
 
 ## Tables of Content
 
